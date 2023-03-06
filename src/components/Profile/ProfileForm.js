@@ -15,6 +15,8 @@ const ProfileForm = () => {
 
     const enteredNewPassword = newPasswordInputRef.current.value;
 
+    // add validation
+
     fetch(
       "https://identitytoolkit.googleapis.com/v1/accounts:update?key=AIzaSyDeX-969z6MGYfH303tiV-00jeCDih_x0Y",
       {
@@ -29,6 +31,8 @@ const ProfileForm = () => {
         },
       }
     ).then((res) => {
+      // assumption: Always succeeds!
+
       history.replace("/");
     });
   };
